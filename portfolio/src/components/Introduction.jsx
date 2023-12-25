@@ -2,8 +2,21 @@ import { CiLocationOn } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 import { FiGithub, FiTwitter, FiFigma } from "react-icons/fi";
 import Image from "next/image";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export const Introduction = () => {
+  const part1Image = {
+    image: "/raccon.jpeg",
+    width: 280,
+    height: 320,
+    bigWidth: 400,
+    bigHeight: 360,
+    bg: "bg-gray-200",
+    top: 0,
+    left: 10,
+    topSquare: -30,
+  };
+  const part2Image = { image: "/raccon.jpeg", width: 280, height: 300 };
   return (
     <div className="px-[80px] py-[96px] max-w-screen-6xl gap-[48px]  ">
       <div className="px-[32px] flex justify-between gap-[48px] flex-col-reverse md:flex-row">
@@ -19,12 +32,12 @@ export const Introduction = () => {
             </p>
           </div>
           <div>
-            <div className="flex items-center textGray">
+            <div className="flex items-center textGray gap-[8px]">
               <CiLocationOn size={25} />
               <p>Ulaanbaatar, Mongolia</p>
             </div>
-            <div className="flex items-center textGray">
-              <GoDotFill />
+            <div className="flex items-center textGray gap-[8px]">
+              <GoDotFill size={25} />
               <p>Available for now</p>
             </div>
           </div>
@@ -34,15 +47,16 @@ export const Introduction = () => {
             <FiFigma size={30} />
           </div>
         </div>
-        <div className="w-[400px] h-[360px] pos-relative flex justify-end items-center">
+        <ImageContainer {...part1Image}></ImageContainer>
+        {/* <div className="w-[400px] h-[360px] relative flex justify-end items-center">
           <Image
             src="/raccon.jpeg"
             width={280}
             height={300}
-            className="pos-absolute top-0 left-0 w-[280px] h-[320px]"
+            className="absolute top-0 left-10 w-[280px] h-[320px] z-10"
           ></Image>
-          <div className="w-[280px] h-[320px] bg-gray-200 pos-absolute top--30 z-[2]"></div>
-        </div>
+          <div className="w-[280px] h-[320px] bg-gray-200 absolute -top-30 z-[2]"></div>
+        </div> */}
       </div>
     </div>
   );
