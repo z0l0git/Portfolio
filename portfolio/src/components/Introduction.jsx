@@ -9,19 +9,14 @@ export const Introduction = () => {
     image: "/raccon.jpeg",
     width: 280,
     height: 320,
-    bigWidth: 400,
-    bigHeight: 360,
     bg: "gray-200",
-    top: 0,
-    left: 3,
-    topSquare: -55,
   };
   const part2Image = { image: "/raccon.jpeg", width: 280, height: 300 };
   return (
-    <div className="px-[80px] py-[96px] max-w-screen-6xl gap-[48px]  ">
+    <div className="px-[16px] md:px-[80px] py-[64px] md:py-[96px] max-w-screen-6xl gap-[48px] flex-col  justify-center md:justify-start">
       <div className="px-[32px] flex justify-between gap-[48px] flex-col-reverse md:flex-row">
-        <div className="flex flex-col gap-[48px] w-3/4">
-          <div>
+        <div className="flex flex-col gap-[48px] w-full md:w-3/4">
+          <div className="flex-col items-center md:items-start justify-center md:justify-start">
             <h2 className="text-[60px] font-bold">Hi, I'm Okay 👋</h2>
             <p className="textGray text-[16px]">
               I'm a full stack developer (React.js & Node.js) with a focus on
