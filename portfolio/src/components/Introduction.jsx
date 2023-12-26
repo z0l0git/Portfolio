@@ -11,10 +11,10 @@ export const Introduction = () => {
     height: 320,
     bigWidth: 400,
     bigHeight: 360,
-    bg: "bg-gray-200",
+    bg: "gray-200",
     top: 0,
-    left: 10,
-    topSquare: -30,
+    left: 3,
+    topSquare: -55,
   };
   const part2Image = { image: "/raccon.jpeg", width: 280, height: 300 };
   return (
