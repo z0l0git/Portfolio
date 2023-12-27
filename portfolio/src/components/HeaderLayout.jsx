@@ -24,7 +24,7 @@ export const HeaderLayout = ({ children }) => {
               <p key={index}>{route}</p>
             ))}
           </div>
-          <div class="border-l-2 rounded-md border-lightgray h-4"></div>
+          <div className="border-l-2 rounded-md border-lightgray h-4"></div>
           <div className="flex items-center gap-4">
             <FiSun size={22} />
             <button className="rounded-xl bg-black text-white px-4 py-1.5">

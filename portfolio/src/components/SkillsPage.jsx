@@ -67,40 +67,6 @@ const coms = [
     params: { image: "/icon-git.png", text: "Git" },
   },
 ];
-const coms2 = [
-  {
-    component: "IconContent",
-    params: { image: "/icon-postgresql.png", text: "PostgreSQL" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-mongodb.png", text: "MongoDB", width: "29px" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-sass.png", text: "Sass/Scss" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-tailwindcss.png", text: "Tailwind" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-figma.png", text: "Figma" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-cypress.png", text: "Cypress" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-storybook.png", text: "Storybook" },
-  },
-  {
-    component: "IconContent",
-    params: { image: "/icon-git.png", text: "Git" },
-  },
-];
 
 export const SkillsPage = () => {
   return (
@@ -119,6 +85,7 @@ export const SkillsPage = () => {
             return (
               <IconContent
                 key={i}
+                width={com.params.width}
                 image={com.params.image}
                 text={com.params.text}
               />
