@@ -9,9 +9,10 @@ export const Introduction = () => {
     image: "/raccon.jpeg",
     width: 280,
     height: 320,
-    bg: "gray-200",
+    isProfile: false,
+    isProfileDiv: false,
+    isProfilePic: false,
   };
-  const part2Image = { image: "/raccon.jpeg", width: 280, height: 300 };
   return (
     <div className="px-[16px] md:px-[80px] py-[64px] md:py-[96px] max-w-screen-6xl gap-[48px] flex-col  justify-center md:justify-start">
       <div className="px-[32px] flex justify-between gap-[48px] flex-col-reverse md:flex-row">
