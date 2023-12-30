@@ -1,11 +1,10 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import { Introduction } from "@/components/Introduction";
 import { AboutMePage } from "@/components/AboutMePage";
 import { SkillsPage } from "@/components/SkillsPage";
 import { ExperiencePage } from "@/components/ExperiencePage";
-
-const inter = Inter({ subsets: ["latin"] });
+import { WorkPage } from "@/components/WorkPage";
+import { ContactPage } from "@/components/ContactPage";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +13,9 @@ export default function Home() {
       <AboutMePage />
       <SkillsPage />
       <ExperiencePage />
+      <WorkPage />
+      <ContactPage />
+      <Footer />
     </div>
   );
 }

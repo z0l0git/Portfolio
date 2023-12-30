@@ -13,7 +13,7 @@ export const HeaderLayout = ({ children }) => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-[1440px] bg-dark-default">
+    <div className="mx-auto max-w-screen-[1440px] bg-dark-default ">
       <div className="flex justify-between px-[16px] md:px-[80px] items-center py-4 ">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold">{"<SS />"}</h1>

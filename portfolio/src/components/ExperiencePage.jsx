@@ -47,7 +47,7 @@ export const ExperiencePage = () => {
           <Tag text="Experience"></Tag>
         </div>
         <div className="flex items-center justify-center w-full mb-[48px]  text-gray-600">
-          <p className="text-[20px]">
+          <p className="text-[20px] text-center">
             Here is a quick summary of my most recent experiences:
           </p>
         </div>
