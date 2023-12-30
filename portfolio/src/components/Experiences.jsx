@@ -13,7 +13,7 @@ export const Experiences = (props) => {
         </h2>
         <ul className="list-disc list-outside ml-[19px]">
           {text.map((com, i) => {
-            return <li>{com}</li>;
+            return <li key={i}>{com}</li>;
           })}
         </ul>
       </div>
