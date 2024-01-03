@@ -11,7 +11,7 @@ export const AboutMePage = () => {
     isProfilePic: true,
   };
   return (
-    <div className="bg-gray-50 w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px]">
+    <div className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px]">
       <div className="flex items-center justify-center w-full mb-[24px] md:mb-[48px]">
         <Tag text="About me"></Tag>
       </div>
@@ -23,7 +23,7 @@ export const AboutMePage = () => {
           <div className="text-[30px] font-bold mb-[24px]">
             <h2>Curious about me? Here you have it:</h2>
           </div>
-          <div className="text-gray-600">
+          <div className="text-gray-600 dark:text-[#D1D5DB]">
             <p className="mb-[16px]">
               I'm a passionate, self-proclaimed designer who specializes in full
               stack development (React.js & Node.js). I am very enthusiastic

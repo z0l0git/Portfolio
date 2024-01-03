@@ -66,7 +66,7 @@ export const WorkPage = () => {
           <Tag text="Work"></Tag>
         </div>
         <div className="flex items-center justify-center w-full mb-[48px]  text-gray-600">
-          <p className="text-[20px] text-center">
+          <p className="text-[20px] text-center dark:text-[#D1D5DB]">
             Some of the noteworthy projects I have built:
           </p>
         </div>

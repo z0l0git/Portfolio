@@ -74,13 +74,13 @@ export const SkillsPage = () => {
       <div className="flex items-center justify-center w-full mb-[16px]">
         <Tag text="Skills"></Tag>
       </div>
-      <div className="flex items-center justify-center w-full mb-[48px]  text-gray-600">
+      <div className="flex items-center justify-center w-full mb-[48px]  text-gray-600 dark:text-[#D1D5DB]">
         <p className="text-[20px]">
           The skills, tools and technologies I am really good at:
         </p>
       </div>
       <div className=" w-[343px] md:w-full mx-[32px] px-[16px] md:px-[32px] flex flex-col flex-wrap gap-[16px] md:gap-[48px] items-center justify-center">
-        <div className="flex w-[300px] md:w-full justify-between flex-wrap gap-y-[48px] gap-x-[20px] md:gap-x-[100px]">
+        <div className="flex w-[300px] md:w-full justify-between flex-wrap gap-y-[48px] gap-x-[20px] md:gap-x-[100px] dark:text-[#D1D5DB]">
           {coms.map((com, i) => {
             return (
               <IconContent

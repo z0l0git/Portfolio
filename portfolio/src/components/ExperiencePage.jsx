@@ -33,21 +33,21 @@ const data = [
     params: {
       title: "Full Stack Developer",
       text: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing.",
       ],
-      date: "Dec 2015 - May 2017",
+      date: "Jul 2017 - Oct 2021",
     },
   },
 ];
 export const ExperiencePage = () => {
   return (
-    <div className="bg-gray-50 w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px] flex flex-col items-center gap-[48px]">
+    <div className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px] flex flex-col items-center gap-[48px]">
       <div>
         <div className="flex items-center justify-center w-full mb-[16px]">
           <Tag text="Experience"></Tag>
         </div>
         <div className="flex items-center justify-center w-full mb-[48px]  text-gray-600">
-          <p className="text-[20px] text-center">
+          <p className="text-[20px] text-center dark:text-[#D1D5DB]">
             Here is a quick summary of my most recent experiences:
           </p>
         </div>

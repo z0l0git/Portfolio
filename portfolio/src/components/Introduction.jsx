@@ -3,6 +3,7 @@ import { GoDotFill } from "react-icons/go";
 import { FiGithub, FiTwitter, FiFigma } from "react-icons/fi";
 import Image from "next/image";
 import { ImageContainer } from "@/components/ImageContainer";
+import { useTheme } from "next-themes";
 
 export const Introduction = () => {
   const part1Image = {
@@ -19,7 +20,7 @@ export const Introduction = () => {
         <div className="flex flex-col gap-[48px] w-full md:w-3/4">
           <div className="flex-col items-center md:items-start justify-center md:justify-start">
             <h2 className="text-[60px] font-bold">Hi, I'm Okay 👋</h2>
-            <p className="textGray text-[16px]">
+            <p className="textGray text-[16px] dark:text-[#D1D5DB]">
               I'm a full stack developer (React.js & Node.js) with a focus on
               creating (and occasionally designing) exceptional digital
               experiences that are fast, accessible, visually appealing, and
@@ -27,12 +28,12 @@ export const Introduction = () => {
               over 7 years, I still love it as if it was something new.
             </p>
           </div>
-          <div>
-            <div className="flex items-center textGray gap-[8px]">
+          <div className="dark:text-[#D1D5DB]">
+            <div className="flex items-center textGray gap-[8px] dark:text-[#D1D5DB]">
               <CiLocationOn size={25} />
               <p>Ulaanbaatar, Mongolia</p>
             </div>
-            <div className="flex items-center textGray gap-[8px]">
+            <div className="flex items-center textGray gap-[8px] dark:text-[#D1D5DB]">
               <GoDotFill size={25} />
               <p>Available for now</p>
             </div>
