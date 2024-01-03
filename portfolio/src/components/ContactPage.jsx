@@ -40,11 +40,11 @@ export const ContactPage = () => {
         <div className="flex items-end justify-center gap-[16px] md:gap-[20px]">
           <FiPhone size={32} />
           <p className="text-[18px] md:text-[36px] font-[600] leading-[40px]">
-            80052392
+            +976 80052392
           </p>
           <IoCopyOutline
             size={32}
-            onClick={() => copy("80052392")}
+            onClick={() => copy("+976 80052392")}
             cursor={"pointer"}
           />
         </div>
