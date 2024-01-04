@@ -5,11 +5,17 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import { RiMoonClearFill } from "react-icons/ri";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRef } from "react";
 
 export const Header = () => {};
 
 export const HeaderLayout = ({ children }) => {
-  const routes = ["About", "Work", "Testimonials", "Contact"];
+  const routes = [
+    { sectionID: "aboutMe", label: "About" },
+    { sectionID: "work", label: "Work" },
+    { sectionID: "testimonials", label: "Testimonials" },
+    { sectionID: "contact", label: "Contact" },
+  ];
 
   const [open, setOpen] = useState(false);
 
@@ -17,6 +23,16 @@ export const HeaderLayout = ({ children }) => {
 
   const handleClick = () => {
     setOpen(!open);
+  };
+  const ref = useRef(null);
+
+  const scrollToSection = (element_id) => {
+    const element = document.getElementById(element_id);
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
 
   return (
@@ -27,13 +43,23 @@ export const HeaderLayout = ({ children }) => {
         </div>
         <div className="gap-10 hidden md:flex-center  dark:gray-dark-default ">
           <div className="flex-center gap-6 h-[176px] text-gray-600 dark:text-[#D1D5DB]">
-            {routes.map((route, index) => (
-              <p key={index}>{route}</p>
+            {routes.map(({ label, sectionID }, index) => (
+              <p
+                style={{ cursor: "pointer" }}
+                id={index}
+                key={index}
+                onClick={() => scrollToSection(sectionID)}
+              >
+                {label}
+              </p>
             ))}
           </div>
           <div className="border-l-2 rounded-md border-lightgray h-4"></div>
           <div className="flex items-center gap-4">
-            <div onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
               {theme === "dark" ? (
                 <RiMoonClearFill size={22} className="text-white" />
               ) : (
@@ -46,7 +72,7 @@ export const HeaderLayout = ({ children }) => {
             </button>
           </div>
         </div>
-        <div className="block md:hidden" onClick={handleClick}>
+        <div className="block md:hidden" onClick={handleClick} ref={ref}>
           {open ? (
             <IoClose size={30} className="flex items-center" />
           ) : (
@@ -70,9 +96,15 @@ export const HeaderLayout = ({ children }) => {
                 <div className="justify-center h-[500px] w-3/4 bg-white dark:bg-[#030712] absolute top-15 right-[16px] z-30 ">
                   <div className="w-full  flex-col justify-between gap-4">
                     <div className="flex-col justify-center items-center gap-6 h-[176px] text-gray-600 dark:text-[#D1D5DB] bg-blue p-[16px]">
-                      {routes.map((route, index) => (
-                        <p className="mb-[16px]" key={index}>
-                          {route}
+                      {routes.map(({ label, sectionID }, index) => (
+                        <p
+                          style={{ cursor: "pointer" }}
+                          className="mb-[16px]"
+                          id={index}
+                          key={index}
+                          onClick={() => scrollToSection(sectionID)}
+                        >
+                          {label}
                         </p>
                       ))}
                     </div>

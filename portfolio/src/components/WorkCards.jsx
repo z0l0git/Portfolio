@@ -19,8 +19,15 @@ export const WorkCards = (props) => {
 
   const EvenStyle = "flex flex-col md:flex-row-reverse imageShadow";
   const OddStyle = "flex flex-col md:flex-row imageShadow";
-  const oddBorder = "rounded-tl-[12px] rounded-bl-[12px]";
-  const evenBorder = "rounded-tr-[12px] rounded-br-[12px]";
+  const oddBorder =
+    "rounded-t-[12px] md:rounded-t-[0px] md:rounded-tl-[12px] md:rounded-bl-[12px]";
+  const evenBorder =
+    "rounded-t-[12px] md:rounded-t-[0px] md:rounded-tr-[12px] md:rounded-br-[12px]";
+
+  const oddTBorder =
+    "rounded-b-[12px] md:rounded-b-[0px] md:rounded-tr-[12px] md:rounded-br-[12px]";
+  const evenTBorder =
+    "rounded-b-[12px] md:rounded-b-[0px] md:rounded-tl-[12px] md:rounded-bl-[12px]";
 
   return (
     <div className={isEven ? EvenStyle : OddStyle}>
@@ -31,7 +38,11 @@ export const WorkCards = (props) => {
       >
         <Image src="/picture.png" width={480} height={384} />
       </div>
-      <div className="p-[32px] md:p-[48px] w-full md:w-1/2 flex flex-col justify-start gap-[24px] text-gray-600 dark:bg-[#1F2937]">
+      <div
+        className={` ${
+          isEven ? evenTBorder : oddTBorder
+        } p-[32px] md:p-[48px] w-full md:w-1/2 flex flex-col justify-start gap-[24px] text-gray-600 dark:bg-[#1F2937]`}
+      >
         <h2 className=" text-[20px] font-bold text-gray-900 dark:text-[#F9FAFB]">
           Fiskill
         </h2>
@@ -45,7 +56,10 @@ export const WorkCards = (props) => {
             return <Tag key={i} text={com}></Tag>;
           })}
         </div>
-        <RiShareBoxLine size={24} />
+        <RiShareBoxLine
+          size={24}
+          className="text-gray-600 dark:text-[#D1D5DB]"
+        />
       </div>
     </div>
   );

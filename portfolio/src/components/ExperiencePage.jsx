@@ -1,5 +1,6 @@
 import { Tag } from "@/components/Tag";
 import { Experiences } from "@/components/Experiences";
+import { useRef } from "react";
 
 const data = [
   {
@@ -33,15 +34,20 @@ const data = [
     params: {
       title: "Full Stack Developer",
       text: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing.",
+        "Lorem ipsum dolor sit amet, consectetur style it right.",
+        "fuck off",
       ],
       date: "Jul 2017 - Oct 2021",
     },
   },
 ];
 export const ExperiencePage = () => {
+  const experience = useRef(null);
   return (
-    <div className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px] flex flex-col items-center gap-[48px]">
+    <div
+      ref={experience}
+      className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px] flex flex-col items-center gap-[48px]"
+    >
       <div>
         <div className="flex items-center justify-center w-full mb-[16px]">
           <Tag text="Experience"></Tag>

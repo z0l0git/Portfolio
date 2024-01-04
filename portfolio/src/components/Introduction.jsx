@@ -4,18 +4,25 @@ import { FiGithub, FiTwitter, FiFigma } from "react-icons/fi";
 import Image from "next/image";
 import { ImageContainer } from "@/components/ImageContainer";
 import { useTheme } from "next-themes";
+import { useRef } from "react";
 
 export const Introduction = () => {
   const part1Image = {
-    image: "/raccon.jpeg",
+    image: "/cat.jpeg",
     width: 280,
     height: 320,
     isProfile: false,
     isProfileDiv: false,
     isProfilePic: false,
   };
+
+  const introduction = useRef(null);
   return (
-    <div className="px-[16px] md:px-[80px] py-[64px] md:py-[96px] max-w-screen-6xl gap-[48px] flex-col  justify-center md:justify-start">
+    <div
+      ref={introduction}
+      id="about"
+      className="px-[16px] md:px-[80px] py-[64px] md:py-[96px] max-w-screen-6xl gap-[48px] flex-col  justify-center md:justify-start"
+    >
       <div className="px-[32px] flex justify-between gap-[48px] flex-col-reverse md:flex-row">
         <div className="flex flex-col gap-[48px] w-full md:w-3/4">
           <div className="flex-col items-center md:items-start justify-center md:justify-start">

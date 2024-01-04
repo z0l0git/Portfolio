@@ -1,17 +1,23 @@
 import { Tag } from "@/components/Tag";
 import { ImageContainer } from "@/components/ImageContainer";
+import { useRef } from "react";
 
 export const AboutMePage = () => {
   const part2Image = {
-    image: "/dog.jpeg",
+    image: "/dog1.jpeg",
     width: 500,
     height: 580,
     isProfile: true,
     isProfileDiv: true,
     isProfilePic: true,
   };
+  const aboutMe = useRef(null);
   return (
-    <div className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px]">
+    <div
+      ref={aboutMe}
+      id="aboutMe"
+      className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px]"
+    >
       <div className="flex items-center justify-center w-full mb-[24px] md:mb-[48px]">
         <Tag text="About me"></Tag>
       </div>

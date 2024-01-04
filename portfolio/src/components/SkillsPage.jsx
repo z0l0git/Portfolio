@@ -1,5 +1,7 @@
 import { Tag } from "@/components/Tag";
 import { IconContent } from "@/components/IconContent";
+import { handleScroll } from "@/components/HeaderLayout";
+import { useRef } from "react";
 
 const coms = [
   {
@@ -69,8 +71,12 @@ const coms = [
 ];
 
 export const SkillsPage = () => {
+  const skills = useRef(null);
   return (
-    <div className="w-full h-fit px-[80px] py-[96px] flex flex-col items-center">
+    <div
+      ref={skills}
+      className="w-full h-fit px-[80px] py-[96px] flex flex-col items-center"
+    >
       <div className="flex items-center justify-center w-full mb-[16px]">
         <Tag text="Skills"></Tag>
       </div>

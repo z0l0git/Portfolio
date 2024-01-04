@@ -1,5 +1,6 @@
 import { Tag } from "@/components/Tag";
 import { WorkCards } from "@/components/WorkCards";
+import { useRef } from "react";
 
 const data = [
   {
@@ -59,8 +60,14 @@ const data = [
 ];
 
 export const WorkPage = () => {
+  const work = useRef(null);
+
   return (
-    <div className="px-[16px] md:px-[80px] py-[64px] md:py-[96px]">
+    <div
+      id="work"
+      ref={work}
+      className="px-[16px] md:px-[80px] py-[64px] md:py-[96px]"
+    >
       <div>
         <div className="flex items-center justify-center w-full mb-[16px]">
           <Tag text="Work"></Tag>
@@ -72,7 +79,6 @@ export const WorkPage = () => {
         </div>
       </div>
       <div className="flex flex-col gap-[48px]">
-        {" "}
         {data.map((com, i) => {
           return (
             <WorkCards
