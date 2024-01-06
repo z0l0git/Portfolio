@@ -40,7 +40,7 @@ export const ContactPage = () => {
         <div className="flex items-end justify-center gap-[16px] md:gap-[20px]">
           <CiMail size={32} />
           <p className="text-[18px] md:text-[36px] font-[600] leading-[40px]">
-            reachsagarshah@gmail.com
+            zolbayar.in@gmail.com
           </p>
 
           <IoCopyOutline
