@@ -63,12 +63,8 @@ export const WorkPage = () => {
   const work = useRef(null);
 
   return (
-    <div
-      id="work"
-      ref={work}
-      className="px-[16px] md:px-[80px] py-[64px] md:py-[96px]"
-    >
-      <div>
+    <div className="px-[16px] md:px-[80px] py-[64px] md:py-[96px]">
+      <div id="work" ref={work}>
         <div className="flex items-center justify-center w-full mb-[16px]">
           <Tag text="Work"></Tag>
         </div>

@@ -46,6 +46,7 @@ export const ExperiencePage = () => {
   return (
     <div
       ref={experience}
+      id="experience"
       className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px] flex flex-col items-center gap-[48px]"
     >
       <div>

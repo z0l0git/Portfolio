@@ -1,8 +1,15 @@
 import { Tag } from "@/components/Tag";
 import { ImageContainer } from "@/components/ImageContainer";
 import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export const AboutMePage = () => {
+  const aboutMe = useRef(null);
+  const isInView = useInView(aboutMe, {
+    triggerOnce: true,
+    margin: "0px 0px -30% 0px", // Adjust this to trigger at the middle
+  });
+
   const part2Image = {
     image: "/dog1.jpeg",
     width: 500,
@@ -11,21 +18,36 @@ export const AboutMePage = () => {
     isProfileDiv: true,
     isProfilePic: true,
   };
-  const aboutMe = useRef(null);
+
   return (
     <div
       ref={aboutMe}
       id="aboutMe"
       className="bg-gray-50 dark:bg-[#111827] w-full h-fit px-[16px] md:px-[80px] py-[64px] md:py-[96px]"
     >
-      <div className="flex items-center justify-center w-full mb-[24px] md:mb-[48px]">
-        <Tag text="About me"></Tag>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+        transition={{ duration: 0.8 }}
+        className="flex items-center justify-center w-full mb-[24px] md:mb-[48px]"
+      >
+        <Tag text="About me" />
+      </motion.div>
       <div className="flex flex-col md:flex-row w-full h-full gap-[48px]">
-        <div className="w-full md:w-[50%] md:h-[770px] flex justify-start gap-[48px]">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          className="w-full md:w-[50%] md:h-[770px] flex justify-start gap-[48px]"
+        >
           <ImageContainer {...part2Image} />
-        </div>
-        <div className=" w-full md:w-1/2 h-full flex-col gap-[16px]">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+          className="w-full md:w-1/2 h-full flex-col gap-[16px]"
+        >
           <div className="text-[30px] font-bold mb-[24px]">
             <h2>Curious about me? Here you have it:</h2>
           </div>
@@ -71,7 +93,7 @@ export const AboutMePage = () => {
               reach out and say hello! I promise I don't bite 😉
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

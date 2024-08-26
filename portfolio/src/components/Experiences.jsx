@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export const Experiences = (props) => {
   const { title, text = [], date } = props;
+
   return (
     <div className="text-gray-600 w-full md:w-[896px] dark:bg-[#1F2937] gap-[16px] flex p-[32px] md:p-[32px] flex-col md:flex-row bottomShadow">
       <div>
